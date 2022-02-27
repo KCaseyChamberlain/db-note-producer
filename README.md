@@ -6,8 +6,6 @@ This application dynamically creates notes using API routes, hosted on a server 
 ### License
 ![Github licence](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This application is licensed under MIT
-
 ### Application Demo
 ![DB Note Producer Demo](./public/assets/images/demo.jpg)
 

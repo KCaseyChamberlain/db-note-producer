@@ -24,7 +24,7 @@ app.get('/api/notes', (req, res) => {
     fs.readFile(dataBase, "utf-8", function (err, noteValues) {
         if (err) throw err
         else {
-            console.log("FETCHING NOTES!")
+            // console.log("FETCHING NOTES!")
             noteValues = JSON.parse(noteValues)
             return res.json(noteValues)
         }
@@ -40,30 +40,29 @@ app.get('/api/notes/:id', (req, res) => {
     }
 });
 
-
-// app.delete('/api/notes/:id', (req, res) => {
-//     fs.readFile(dataBase, "utf-8", function (err, noteValues) {
-//         if (err) throw err
-//         else {
-//             console.log("FETCHING NOTES FOR DELETION!")
-//             noteValues = JSON.parse(noteValues)
-//             return res.json(noteValues)
-//         }
-//     })
-//     var selectedNote = req.params.id
-//     for (var i = 0; i < notes.length; i++) {
-//         if(selectedNote == notes[i].id){
-//             return res.json(notes[i])
-//         }
-//     }
-//     fs.writeFile(dataBase, JSON.stringify(notes), function (err) {
-//         if (err) throw err
-//         else {
-//             console.log("note has been deleted bossman!")
-//         }
-//     })
-// });
-
+app.delete('/api/notes/:id', (req, res) => {
+    fs.readFile(dataBase, "utf-8", function (err, noteValues) {
+        if (err) throw err
+        else {
+            console.log("READING NOTES FOR DELETION!")
+            noteValues = JSON.parse(noteValues)
+            return res.json(noteValues)
+        }
+    })
+    var selectedNote = req.params.id
+    for (var i = 0; i < notes.length; i++) {
+        if(selectedNote == notes[i].id){
+            // HOW DO I DELETE selectedNote?
+            // return res.json(notes[i])
+        }
+    }
+    // fs.writeFile(dataBase, JSON.stringify(notes), function (err) {
+    //     if (err) throw err
+    //     else {
+    //         console.log("note has been deleted!")
+    //     }
+    // })
+});
 
 app.post("/api/notes", (req, res) => {
     var note = req.body;
