@@ -1,27 +1,27 @@
 ## DB Note Producer
 
-### Description
+### Description:
 This application dynamically creates AND deletes notes using API routes. Hosted on a server provided by Heroku.
 
 ### License
 ![Github licence](https://img.shields.io/badge/license-MIT-blue.svg)
 
-### Application Demo
+### Application Demo:
 ![DB Note Producer Demo](./public/assets/images/demo.jpg)
 
-### Table of Contents
+### Table of Contents:
 - [Description](#description)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions?](#questions)
 
-### Contributing
+### Contributing:
 No contributions at this time.
 
-### Tests
+### Tests:
 No tests at this time.
 
-### Questions
+### Questions:
 GitHub Username: (kcaseychamberlain) 
     
 View project hosted by Heroku at: https://db-note-producer.herokuapp.com/
