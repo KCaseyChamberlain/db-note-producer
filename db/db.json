@@ -10,23 +10,23 @@
         "id": "1"
     },
     {
-        "title": "Shipping",
+        "title": "Shipments",
         "text": "Drop package off at UPS.",
         "id": "2"
     },
     {
-        "title": "Shipping",
-        "text": "Janice",
+        "title": "School",
+        "text": "Do Homework!",
         "id": "3"
     },
     {
-        "title": "Hello",
-        "text": "Garrettttt",
+        "title": "Casey got this to work?",
+        "text": "Oh yeah he did!",
         "id": "4"
     },
     {
-        "title": "Garrett's award",
-        "text": "special boi",
+        "title": "Try deleting me!",
+        "text": "It works :)",
         "id": "5"
     }
 ]
