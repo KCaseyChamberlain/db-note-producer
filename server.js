@@ -52,16 +52,20 @@ app.delete('/api/notes/:id', (req, res) => {
     var selectedNote = req.params.id
     for (var i = 0; i < notes.length; i++) {
         if(selectedNote == notes[i].id){
-            // HOW DO I DELETE selectedNote?
-            // return res.json(notes[i])
+            delete notes[selectedNote]
+            console.log(selectedNote)
+            console.log(notes)
         }
+        // if(notes = null){
+        //     delete null
+        // }
     }
-    // fs.writeFile(dataBase, JSON.stringify(notes), function (err) {
-    //     if (err) throw err
-    //     else {
-    //         console.log("note has been deleted!")
-    //     }
-    // })
+    fs.writeFile(dataBase, JSON.stringify(notes), function (err) {
+        if (err) throw err
+        else {
+            console.log("note has been deleted!")
+        }
+    })
 });
 
 app.post("/api/notes", (req, res) => {
