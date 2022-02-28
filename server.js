@@ -12,15 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
 
-// HTML routes
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
-
-app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
-});
-
 // API route
 app.get('/api/notes', (req, res) => {
     fs.readFile(dataBase, "utf-8", function (err, noteValues) {
@@ -36,7 +27,7 @@ app.get('/api/notes', (req, res) => {
 app.get('/api/notes/:id', (req, res) => {
     var selectedNote = req.params.id
     for (var i = 0; i < notes.length; i++) {
-        if(selectedNote == notes[i].id){
+        if (selectedNote == notes[i].id) {
             return res.json(notes[i])
         }
     }
@@ -52,10 +43,10 @@ app.delete('/api/notes/:id', (req, res) => {
     })
     var selectedNote = req.params.id
     for (var i = 0; i < notes.length; i++) {
-        if(selectedNote == notes[i].id){
+        if (selectedNote == notes[i].id) {
             for (var i = notes.length - 1; i >= 0; --i) {
                 if (notes[i].id == selectedNote) {
-                    notes.splice(i,1);
+                    notes.splice(i, 1);
                     console.log(notes)
                 }
             }
@@ -92,6 +83,15 @@ app.post("/api/notes", (req, res) => {
     res.json(note)
 })
 
-    app.listen(PORT, () => {
+// HTML routes
+app.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });

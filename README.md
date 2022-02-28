@@ -24,6 +24,6 @@ No tests at this time.
 ### Questions:
 GitHub Username: (kcaseychamberlain) 
     
-View project hosted by Heroku at: https://db-note-producer.herokuapp.com/
+View project hosted by Heroku at: https://db-note-producer.herokuapp.com
     
 If you have any questions, contact Casey at: caseygchamberlain@gmail.com
