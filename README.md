@@ -4,7 +4,7 @@
 This application dynamically creates AND deletes notes using API routes. Hosted on a server provided by Heroku.
 
 ### License
-![Github licence](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub licence](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ### Application Demo:
 ![DB Note Producer Demo](./public/assets/images/demo.jpg)
